@@ -1,68 +1,67 @@
 
 #include <stdio.h>
+#include <stdlib.h>
 
-int find_minimum(int arr[], int size) {
-    int min_val = arr[0];
-    for (int i = 1; i < size; i++) {
-        if (arr[i] < min_val) {
-            min_val = arr[i];
-        }
-    }
-    return min_val;
-}
 
-int find_maximum(int arr[], int size) {
-    int max_val = arr[0];
-    for (int i = 1; i < size; i++) {
-        if (arr[i] > max_val) {
-            max_val = arr[i];
-        }
-    }
-    return max_val;
-}
+int main()
+{
+    int marks[10];
+    int total=0;
+    int i;
 
-float find_average(int arr[], int size) {
-    float sum = 0;
-    for (int i = 0; i < size; i++) {
-        sum += arr[i];
-    }
-    return sum / size;
-}
-
-void reverse_array(int arr[], int size) {
-    int temp;
-    for (int i = 0; i < size / 2; i++) {
-        temp = arr[i];
-        arr[i] = arr[size - i - 1];
-        arr[size - i - 1] = temp;
-    }
-}
+    printf("Enter the 10 marks\n");
+    for(i=0;i<10;i++)
+    {
+        printf("Mark %d:",i+1);
+        scanf("%d", &marks[i]);
+        total+=marks[i];
 
 int main() {
-    int arr[10];
+    int size;
+    printf("Enter the size of the arrays: ");
+    scanf("%d", &size);
 
-    printf("Enter 10 values for the array:\n");
-    for (int i = 0; i < 10; i++) {
-        scanf("%d", &arr[i]);
+    int array1[size], array2[size], vectorSum[size];
+    int scalarSum = 0;
+
+
+    printf("Enter %d integer values for array1:\n", size);
+    for (int i = 0; i < size; i++) {
+        printf("Value %d: ", i + 1);
+        scanf("%d", &array1[i]);
     }
 
 
-    int min_val = find_minimum(arr, 10);
-    printf("Minimum value: %d\n", min_val);
+    printf("Enter %d integer values for array2:\n", size);
+    for (int i = 0; i < size; i++) {
+        printf("Value %d: ", i + 1);
+        scanf("%d", &array2[i]);
+    }
+    float average=(float)total/10;
+    printf("Total marks: %d\n", total);
+    printf("Average marks: %d\n", average);
+    if(average<50)
+    {
+        printf("Fail!\n");
 
 
-    int max_val = find_maximum(arr, 10);
-    printf("Maximum value: %d\n", max_val);
+    for (int i = 0; i < size; i++) {
+        scalarSum += array1[i];
+    }
 
 
-    float avg_val = find_average(arr, 10);
-    printf("Average value: %.2f\n", avg_val);
+    for (int i = 0; i < size; i++) {
+        vectorSum[i] = array1[i] + array2[i];
+    }
+    else
+    {
+        printf("Pass!\n");
 
+    printf("Scalar Sum: %d\n", scalarSum);
 
-    reverse_array(arr, 10);
-    printf("Reversed array: ");
-    for (int i = 0; i < 10; i++) {
-        printf("%d ", arr[i]);
+    printf("Vector Sum (array1 + array2): ");
+    for (int i = 0; i < size; i++) {
+        printf("%d ", vectorSum[i]);
     }
     printf("\n");
 
