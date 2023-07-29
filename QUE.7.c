@@ -4,16 +4,23 @@
 
 int main()
 {
-   int n1,n2,valu;
-   printf("Enter 1st num");
-   scanf("%d",&n1);
-   printf("Enter 2nd num");
-   scanf("%d",&n2);
-   valu=n1;
-   n1=n2;
-   n2=valu;
-   printf("swapped valu:\n");
-   printf("1st num is%d\n",n1);
-   printf("2nd num is%d\n",n2);
-  return 0;
+    float bs,ms,addiallownce=0,bonus=0,grossremuneration;
+    char city;
+    printf("Enter basic salary:");
+    scanf("%f",&bs);
+    printf("Enter month sales:");
+    scanf("%f",&ms);
+    printf("Enter the city(c for colombo,any other character for other cities):");
+    scanf("%c",&city);
+    if (ms>=0&&ms<=25000)
+        bonus=0.10*ms;
+    else if(ms>25000 && ms<=50000)
+        bonus=0.12*ms;
+    else if(ms>50000)
+        bonus=0.15*ms;
+    if(city=='c')
+        addiallownce=2500;
+    grossremuneration=bs+addiallownce+bonus;
+    printf("grossremuneration:%.2f\n",grossremuneration);
+    return 0;
 }

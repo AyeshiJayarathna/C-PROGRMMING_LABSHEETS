@@ -4,16 +4,21 @@
 
 int main()
 {
-int dis;
-int time;
-float avgspeed;
-printf("Enter the distance travelled in meters:");
-scanf("%d",&dis);
-printf("Enter the time taken in seconds:");
-scanf("%d",&time);
-avgspeed=(float)dis/time;
-printf("the average speed is%.2fm/s\n");
+    char empname[50];
+    float basicsalary,newsalary,increment;
 
-return 0;
+    printf("Enter employee name:");
+    scanf("%s",&empname);
+    printf("Enter basic salary:");
+    scanf("%f",&basicsalary);
+    if (basicsalary>=10000)
+    increment=basicsalary*0.15;
+    else if(basicsalary>5000)
+    increment=basicsalary*0.10;
+    else
+ent=basicsalary*0.05;
+    newsalary=basicsalary+increment;
+    printf("Employee name %s\n",empname);
+    printf("new salary %.2f\n",newsalary);
+    return 0;
 }
-
