@@ -1,34 +1,31 @@
-#include <stdio.h>
-#include <stdlib.h>
-
-int main()
-{
-    int num;
-    printf("Enter an integer:");
-    scanf("%d",&num);
-    if(num%2==0){
-        printf("%d is an even number\n",num);
-    }else{
-    printf("%d is an odd number\n",num);
-    }
-    return 0;
+#include<stdio.h>
+int main(){
+int i=0;
+while(i<=100){
+printf("%d",i);
+i++;
+}
+return 0;
 }
 #include <stdio.h>
 #include <stdlib.h>
 
 int main()
 {
-    int num;
-    printf("Enter an integer:");
-    scanf("%d",&num);
-    switch(num%2){
-        case 0:
-        printf("%d is an even number\n",num);
-    break;
-        case 1:
-        case-1:
-        printf("%d is an odd number\n",num);
-        break;
-    }
+    int i=0;
+    do{
+    printf("%d",i);
+    i++;
+    }while(i<=100);
+    return 0;
+}#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+   int i;
+   for(i=0;i<=100;i++) {
+        printf("%d",i);
+   }
     return 0;
 }
