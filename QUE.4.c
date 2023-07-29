@@ -1,20 +1,22 @@
-
-#include <stdio.h>
-
-#define PI 3.14159
+ #include <stdio.h>
+#include <stdlib.h>
 
 int main()
 {
-    double radius,diameter,circumference,area;
-    printf("Enter the radius of the circle");
-    scanf("%lf",&radius);
-
-    diameter=2*radius;
-    circumference=2*PI*radius;
-    area=PI*radius*radius;
-
-    printf("diameter:%.2f\n",diameter);
-    printf("circumference:%.2f\n",circumference);
-    printf("area:%.2f\n",area);
+    char letter;
+    printf("Enter a character");
+    scanf("%c",&letter);
+    switch (letter){
+    case'a':
+    case'e':
+    case'i':
+    case'o':
+    case'u':
+    printf("%c is a vowel.\n");
+    break;
+    default:
+        printf("%c is not a vowel.\n",letter);
+        break;
+    }
     return 0;
 }

@@ -3,14 +3,36 @@
 
 int main()
 {
-    int n1,n2;
-    printf("Enter the first integer");
-    scanf("%d",&n1);
-    printf("Enter the second integer");
-    scanf("%d",&n2);
-    if(n1%n2==0)
-    printf("%d is a multiple of %d\n",n1,n2);
-    else
-    printf("%d is not a multiple of %d\n",n1,n2);
+    int month;
+    printf("Enter the number(1-12):");
+    scanf("%d",&month);
+    switch(month){
+    case 1:printf("January has 31 days\n");
+    break;
+    case 2:printf("February has 28 days\n");
+    break;
+    case 3:printf("March has 31 days\n");
+    break;
+    case 4:printf("April has 30 days\n");
+    break;
+    case 5:printf("May has 31 days\n");
+    break;
+    case 6:printf("June has 30 days\n");
+    break;
+    case 7:printf("July has 31 days\n");
+    break;
+    case 8:printf("Agust has 30 days\n");
+    break;
+    case 9:printf("september has 31 days\n");
+    break;
+    case 10:printf("October has 30 days\n");
+    break;
+    case 11:printf("November has 31 days\n");
+    break;
+    case 12:printf("December has 30 days\n");
+    break;
+    default:printf("Invalid month number\n");
+    break;
+    }
     return 0;
 }

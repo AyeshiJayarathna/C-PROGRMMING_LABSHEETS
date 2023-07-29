@@ -1,20 +1,34 @@
-
- #include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 
 int main()
 {
-    int n1,n2;
-    printf("Enter first number");
-    scanf("%d",&n1);
-    printf("Enter second number");
-    scanf("%d",&n2);
-
-    if(n1>n2)
-    {
-    printf("The highest number is %d\n",n1);
+    int num;
+    printf("Enter an integer:");
+    scanf("%d",&num);
+    if(num%2==0){
+        printf("%d is an even number\n",num);
     }else{
-    printf("The highest number is %d\n",n2);
+    printf("%d is an odd number\n",num);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
 
+int main()
+{
+    int num;
+    printf("Enter an integer:");
+    scanf("%d",&num);
+    switch(num%2){
+        case 0:
+        printf("%d is an even number\n",num);
+    break;
+        case 1:
+        case-1:
+        printf("%d is an odd number\n",num);
+        break;
+    }
     return 0;
 }
